@@ -1,6 +1,6 @@
 # Hamiltonian Neural Networks on the Double Pendulum
 
-[![CI](https://github.com/danringart/hnn-double-pendulum/actions/workflows/ci.yml/badge.svg)](https://github.com/danringart/hnn-double-pendulum/actions/workflows/ci.yml)
+[![CI](https://github.com/danrixd/hnn-double-pendulum/actions/workflows/ci.yml/badge.svg)](https://github.com/danrixd/hnn-double-pendulum/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
 
@@ -27,11 +27,11 @@ Rolling 20 held-out initial conditions forward with classical RK4 for 2 000
 steps (20 s of simulated time) and measuring the drift of the *true*
 Hamiltonian along each predicted trajectory:
 
-| Model                  | median `|ΔH|/|H₀|` at t=20 s | p75   | mean  |
-|------------------------|-----------------------------:|------:|------:|
-| Ground truth (symplectic)  | 2.5 × 10⁻⁵             | 8.1 × 10⁻⁵ | 1.2 × 10⁻⁴ |
-| **MLP baseline**       | **1.44 × 10⁻¹**              | 2.30 × 10⁻¹ | 1.88 × 10⁻¹ |
-| **HNN**                | **2.77 × 10⁻³**              | 5.57 × 10⁻³ | 8.20 × 10⁻³ |
+| Model | median \|ΔH\|/\|H₀\| at t=20 s | p75 | mean |
+|---|---:|---:|---:|
+| Ground truth (symplectic) | 2.5 × 10⁻⁵ | 8.1 × 10⁻⁵ | 1.2 × 10⁻⁴ |
+| **MLP baseline** | **1.44 × 10⁻¹** | 2.30 × 10⁻¹ | 1.88 × 10⁻¹ |
+| **HNN** | **2.77 × 10⁻³** | 5.57 × 10⁻³ | 8.20 × 10⁻³ |
 
 The HNN conserves energy roughly **50× better** than the size-matched MLP,
 reproducing the qualitative finding of Greydanus et al. (2019) on this system.
