@@ -1,8 +1,17 @@
 # Hamiltonian Neural Networks on the Double Pendulum
 
+[![CI](https://github.com/danringart/hnn-double-pendulum/actions/workflows/ci.yml/badge.svg)](https://github.com/danringart/hnn-double-pendulum/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
+
 A clean-room replication of **"Hamiltonian Neural Networks"** (Greydanus, Dzamba
 and Yosinski, NeurIPS 2019) on the hardest of the three systems studied in the
 paper: the planar double pendulum.
+
+> Built by **Dan Ringart** — algorithm developer, B.Sc. Physics (Tel Aviv
+> University, condensed matter & non-linear dynamics). This repo is a
+> portfolio piece at the intersection of classical mechanics and modern
+> machine learning.
 
 A vanilla MLP trained to predict the time-derivative of a chaotic mechanical
 system looks fine in-distribution but bleeds energy over long rollouts — it has
@@ -87,7 +96,7 @@ required.
 
 ```bash
 # 1. Install
-python -m pip install -e .[dev]
+python -m pip install -e '.[dev]'
 
 # 2. Generate training data (150 trajectories × 200 steps @ dt=0.01)
 python -m data.generate --out data/double_pendulum.npz

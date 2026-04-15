@@ -9,7 +9,6 @@ degrade into "just another MLP".
 
 from __future__ import annotations
 
-import numpy as np
 import torch
 
 from models import HNN, MLPBaseline

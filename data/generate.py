@@ -55,7 +55,9 @@ def sample_initial_states(
 
 
 def rollout(state0: np.ndarray, dt: float, n_steps: int) -> np.ndarray:
-    ode = lambda s: dynamics(s, DEFAULT_PARAMS)
+    def ode(s: np.ndarray) -> np.ndarray:
+        return dynamics(s, DEFAULT_PARAMS)
+
     return integrate(ode, state0, dt, n_steps, method="implicit_midpoint")
 
 
