@@ -23,6 +23,9 @@ checkpoints/
 *.pt
 *.pth
 
+# Derived eval payloads (keep the PNG/GIFs in docs/, drop raw .npz)
+docs/screenshots/*.npz
+
 # OS
 .DS_Store
 Thumbs.db
