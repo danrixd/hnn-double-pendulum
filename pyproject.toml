@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hnn-double-pendulum"
+version = "0.1.0"
+description = "Replication of Hamiltonian Neural Networks (Greydanus et al., NeurIPS 2019) on the double pendulum."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Dan Ringart" }]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.2",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+notebook = [
+    "jupyter",
+    "ipykernel",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["physics", "models", "eval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

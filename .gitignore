@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Env
+.venv/
+venv/
+.env
+
+# Data & artifacts (regenerate with data/generate.py)
+data/*.pkl
+data/*.npz
+data/*.npy
+runs/
+checkpoints/
+*.pt
+*.pth
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
