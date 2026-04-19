@@ -8,11 +8,6 @@ A clean-room replication of **"Hamiltonian Neural Networks"** (Greydanus, Dzamba
 and Yosinski, NeurIPS 2019) on the hardest of the three systems studied in the
 paper: the planar double pendulum.
 
-> Built by **Dan Ringart** — algorithm developer, B.Sc. Physics (Tel Aviv
-> University, condensed matter & non-linear dynamics). This repo is a
-> portfolio piece at the intersection of classical mechanics and modern
-> machine learning.
-
 A vanilla MLP trained to predict the time-derivative of a chaotic mechanical
 system looks fine in-distribution but bleeds energy over long rollouts — it has
 no reason not to. An HNN learns a scalar `H_θ(q, p)` and assembles its vector
